@@ -1,36 +1,80 @@
 import streamlit as st
+import numpy as np
+import pandas as pd
 
-# st.title('Bem vindo')
-# st.header('Bem vindo')
-# st.subheader('Bem vindo')
-# st.markdown("----")
+# st.write('Bem vinda')
 
-# st.markdown("# Isso é um texto com markdown e um [#]")
-# st.markdown("## Isso é um texto com markdown e [##]")
-# st.markdown("### Isso é um texto com markdown e [###]")
+# dataframe = np.random.randn(10, 20)
+# st.dataframe(dataframe)
 
 
-st.markdown("----")
+# dataframe = pd.DataFrame(
+#     np.random.randn(10, 20),
+#     columns=('col %d' % i for i in range(20)))
 
-st.markdown("Markdown")
-st.markdown("_Markdown itálico_")
-st.markdown("*Markdown itálico*")
-st.markdown("__Markdown negrito__")
-st.markdown("**Markdown negrito**")
-st.markdown("__*Markdown itálico e negrito*__")
+# st.dataframe(dataframe.style.highlight_max(axis=0))
 
 
-st.markdown("Isso é um link pro [google](https://google.com.br)")
+# dataframe = pd.DataFrame(
+#     np.random.randn(10, 20),
+#     columns=('col %d' % i for i in range(20)))
+# st.table(dataframe)
 
 
-st.markdown("<h1 style='text-align: center; color: red;'>Título em vermelho</h1>", unsafe_allow_html=True)
-
-st.markdown('Olá, mundo :sunglasses:')
-st.markdown('Olá, mundo :100:')
+# x = st.slider('x')  # 👈 this is a widget
+# st.write(x, 'squared is', x * x)
 
 
 
-st.markdown('''MARKDOWN | PEQUENO | GRANDE
-                ---     | ---     | ---
-              *iTÁLICO* | `CODE`  | **NEGRITO**
-            ''')
+# st.title('My first app')
+
+# st.write("Here's our first attempt at using data to create a table:")
+# st.write(pd.DataFrame({
+#     'first column': [1, 2, 3, 4],
+#     'second column': [10, 20, 30, 40]
+# }))
+
+
+# """
+# # My first app
+# Here's our first attempt at using data to create a table:
+# """
+
+# df = pd.DataFrame({
+#   'first column': [1, 2, 3, 4],
+#   'second column': [10, 20, 30, 40]
+# })
+
+# df
+
+# chart_data = pd.DataFrame(
+#      np.random.randn(20, 3),
+#      columns=['a', 'b', 'c'])
+
+# st.line_chart(chart_data)
+
+
+# map_data = pd.DataFrame(
+#     np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
+#     columns=['lat', 'lon'])
+
+# st.map(map_data)
+
+
+
+
+import time
+
+'Starting a long computation...'
+
+# Add a placeholder
+latest_iteration = st.empty()
+bar = st.progress(0)
+
+for i in range(100):
+  # Update the progress bar with each iteration.
+  latest_iteration.text(f'Iteration {i+1}')
+  bar.progress(i + 1)
+  time.sleep(0.1)
+
+'...and now we\'re done!'
