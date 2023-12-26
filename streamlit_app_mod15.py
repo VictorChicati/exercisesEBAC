@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+# Link to aplication
+# https://exerciseebacmod15.streamlit.app/
+
 st.title('Uber pickups in NYC')
 
 DATE_COLUMN = 'date/time'
