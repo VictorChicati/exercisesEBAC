@@ -37,8 +37,7 @@ comando para rodar se o programa tiver uma informação de ajuda
 
 Nomes dos desenvolvedores do projeto e informação para entrar em contato.
 
-ex. Victor Chicati
-ex. [@victorchicati](https://www.linkedin.com/in/victorchicati/)
+[@victorchicati](https://www.linkedin.com/in/victorchicati/)
 
 ## Histórico de versões.
 
